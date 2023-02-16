@@ -1,4 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"); /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"); /*
+:root {
+  --main-color: #393E46;
+  --main-bg-color: #FAFAFA;
+}
+
+:root.dark {
+  --main-color: #FAFAFA;
+  --main-bg-color: #393E46;
+}
+*/
+:root {
+  --primary-desaturated-red: hsl(0, 36%, 70%);
+  --primary-desaturated-red-rgb: 206, 151, 151;
+  --primary-soft-red: hsl(0, 93%, 68%);
+  --neutral-dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -309,14 +327,74 @@ template {
   display: none;
 }
 
-:root {
-  --primary-desaturated-red: hsl(0, 36%, 70%);
-  --primary-soft-red: hsl(0, 93%, 68%);
-  --neutral-dark-grayish-red: hsl(0, 6%, 24%);
-}
-
-body {
+.container {
   font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  line-height: 0;
 }
 
-/*# sourceMappingURL=main.css.map */
+.header__logo {
+  margin: 2rem;
+  height: 1.3rem;
+}
+.header__img {
+  width: 100%;
+}
+
+.main {
+  background-color: hsl(0deg, 100%, 98%);
+  text-align: center;
+  padding: 4rem 0;
+}
+.main__title {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.7rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+}
+.main__title span {
+  font-weight: 300;
+  color: var(--primary-desaturated-red);
+}
+.main__text {
+  width: calc(100% - 4rem);
+  color: var(--primary-desaturated-red);
+  display: inline-block;
+  line-height: 1.5;
+  font-size: 0.9em;
+}
+.main__form {
+  display: inline-block;
+  width: calc(100% - 3.5rem);
+  margin-top: 1.5rem;
+  position: relative;
+}
+.main__form input {
+  background-color: transparent;
+  border: 1px solid rgba(var(--primary-desaturated-red-rgb), 0.5);
+  outline-style: none;
+  border-radius: 3rem;
+  padding: 0.9rem 1.5rem;
+  width: calc(100% - 3.5rem);
+}
+.main__form input::placeholder {
+  color: rgba(var(--primary-desaturated-red-rgb), 0.5);
+}
+.main__form button {
+  position: absolute;
+  height: 100%;
+  width: 4.1rem;
+  right: 0;
+  border-radius: 2.5rem;
+  border-style: none;
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

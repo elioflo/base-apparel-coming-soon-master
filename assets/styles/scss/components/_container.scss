@@ -1,0 +1,7 @@
+.container {
+  font-family: 'Josefin Sans', sans-serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  line-height: 0;
+}
