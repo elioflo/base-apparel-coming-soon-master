@@ -13,8 +13,11 @@
 <body class="container">
   <header class="header">
     <img class="header__logo" src="./assets/images/logo.svg" alt="">
-    <img class="header__img" src="./assets/images/hero-mobile.jpg" alt="" srcset="">
   </header>
+  <picture class="img">
+    <source media="(min-width: 640px)" srcset="./assets/images/hero-desktop.jpg" />
+    <img  src="./assets/images/hero-mobile.jpg" alt="" srcset="">
+  </picture>
   <main class="main">
     <h1 class="main__title"><span>We're</span> coming soon</h1>
     <p class="main__text">

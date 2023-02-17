@@ -1,7 +1,20 @@
+@import '../abstract/media-queries';
+
 .container {
   font-family: 'Josefin Sans', sans-serif;
   min-height: 100vh;
+  background-color: hsl(0, 100%, 98%);
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
   line-height: 0;
+  
+  @include media-query($sm-screen){
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;    
+  }
+  
+  @include media-query($lg-screen){
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+  }
 }

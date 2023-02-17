@@ -1,7 +1,9 @@
+@import '../abstract/media-queries';
+
 .main {
-  background-color: hsl(0, 100%, 98%);
   text-align: center;
   padding: 4rem 0;
+  max-width: calc($sm - 4rem);
 
   &__title {
     font-size: 2.5em;
@@ -23,6 +25,7 @@
     line-height: 1.5;
     font-size: .9em;
   }
+
   &__form {
     display: inline-block;
     width: calc(100% - 3.5rem);
@@ -57,5 +60,34 @@
     }
   }
 
+  @include media-query($md-screen){
+    justify-self: center;
+    align-self: center;
+  }
+
+  @include media-query($lg-screen){
+    text-align: left;
+    
+    &__title {
+      font-size: 5em;
+    }
+
+    &__text {
+      font-size: 1.2em;
+    }
+
+    &__form {
+      input {
+        padding: 1.3rem 2rem;
+        font-size: 1.2em;
+      }
+
+      button {
+        width: 6.5rem;
+        top: 0;
+        right: -1rem;
+      }
+    }
+  }
 
 }
